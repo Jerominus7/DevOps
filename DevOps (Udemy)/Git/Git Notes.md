@@ -16,7 +16,7 @@ All files will be written locally and then pushed to a staging area. I.e. Story1
 ### Staging Area
 
 This is where all files will be placed before a developer is ready to commit the files which will then update the remote repository.
-### Committed Files
+### Committed Files #commit
 
 Once a developer commits the files, the remote repository will be updated with the files, to include version contol.
 
@@ -39,7 +39,7 @@ From here we want to add the file from the working area to the staging area
 	1. I ran git status to ensure the file was in the "Changes to be committed section"
 2. Add story to the committed files: `git commit -m "Added first story"` 
 	1. I received errors with this as I never configured the actual user email or user name in my config settings. After I configured these I resubmitted the commit command successfully.
-		1. `git config --global user.email $email
+		1. `git config --global user.email jeromy.exe@gmail.com
 		2. `git config --global user.name "Jeromy"`
 3. Added a second line to the file to view the modified file and see how git sees it
 	1. `echo "This is my second line in my file." >> story1.txt`
@@ -78,7 +78,7 @@ By default this shows the author, date of commit, file hash, and commit message,
 `git log -n 1` - you can use this command to pull the last update
 
 
-### Branches 
+### Branches #branch
 
 `git checkout -b <name>` - this creates a new branch named whatever you chose and then immediately switches to it
 
@@ -98,7 +98,7 @@ HEAD is where you are currently located in the git repository. It points to the 
 
 
 
-### Remote Repos
+### Remote Repos #remote
 
 Most commonly used platforms:
 
@@ -122,7 +122,7 @@ When adding a remote repository use the cmd below:
 
 This will show fetch and pushes to the remote repository.
 
-#### Pushing to remote Repo
+#### Pushing to remote Repo #push
 
 `git push origin master` - This command always need two parameters, the alias of the remote repo (origin) and the branch you are currently on (master)
 
@@ -131,7 +131,7 @@ This will show fetch and pushes to the remote repository.
 Troubleshooting: If you end up getting 403 errors, (access denied) you may need to be given permissions (write) to the project within the platform you are using, i.e. Github, etc. Settings > Users > Collaboration > Find User > Grant Write
 
 
-#### Cloning Repositories
+#### Cloning Repositories #clone
 
 `git clone [ ssh link ]` - clone repository
 
@@ -142,7 +142,7 @@ Pull down the repo to work with locally.
 Will have all of the git history in `git log`
 
 
-#### Pull Requests
+#### Pull Requests #pull
 
 Also called PR.
 
@@ -164,7 +164,7 @@ It is possible someone approves the PR, but the owner of the master (or someone 
 
 
 
-#### Git Fetch 
+#### Git Fetch #fetch
 
 `git fetch origin master` - local repo is not automatically aware of the changes on the remote repository, this will update the local origin with the remote master repo. 
 
@@ -178,7 +178,7 @@ In addition to doing this, we can also pull the new contents down.
 
 
 
-#### Merge Conflicts
+#### Merge Conflicts #merge
 
 Conflicts can occur when two people are editing the same file on their remote machine at the same time, and then attempt to push it back to the remote master. Git has a way of handling this.
 
@@ -199,7 +199,7 @@ My notes: When editing the version of the file in vim, :w to save, :quit to quit
 
 `git push origin master` - push the local edited file back up to the remote repo, after you have added and committed it.
 
-#### Fork 
+#### Fork #fork
 
 When wanting to collaborate on a project, you can fork which takes a copy of the remote project, and creates a remote copy for yourself to do with it as you please. Many times when multiple people are all working on the same open source project, you can allow them to fork and do all of the work on a separate instance of the project. At a later date, they can then initiate a pull request to merge the projects back with the original.
 
